@@ -1282,8 +1282,8 @@ public class GSMPhone extends PhoneBase {
             = (ussdMode == CommandsInterface.USSD_MODE_REQUEST);
 
         isUssdError
-            = (ussdMode != CommandsInterface.USSD_MODE_NOTIFY
-                && ussdMode != CommandsInterface.USSD_MODE_REQUEST);
+            = ((ussdMode == 4)
+               ||(ussdMode == 5));
 
         // See comments in GsmMmiCode.java
         // USSD requests aren't finished until one
